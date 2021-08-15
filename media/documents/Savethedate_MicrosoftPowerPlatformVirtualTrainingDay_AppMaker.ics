@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+BEGIN:VEVENT
+UID:1833360a87e8a1399b
+DTSTAMP:20210522T034618Z
+DTSTART:20210525T170000Z
+DTEND:20210525T203000Z
+SUMMARY:Save the date: Microsoft Power Platform Virtual Training Day: App Maker
+LOCATION:Digital Event
+DESCRIPTION:How to join the virtual training: Click the link to join: https://event.on24.com/wcc/r/3089370/1F847A19B29676447233B775091ADD55. Please note\, this link is unique for each registrant and should not be forwarded.
+END:VEVENT
+END:VCALENDAR

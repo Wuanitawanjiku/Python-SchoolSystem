@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241, 195, 217);    
+}
+
+table{
+    width: 400px;
+    margin-left: 25%;
+    margin-top: 8%;
+}
+
+th, caption{
+    text-align: left;
+}
+
+table, th, td{
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background-color: blanchedalmond;
+}
+
+tr:nth-child(odd){
+    background-color:#ddd;
+}
+
+.pic{
+    text-align: center;
+    height: 90px;
+    border-radius: 20px;
+    margin-left: 520px;
+    margin-top: 30px;
+}
+    </style>
+</head>
+
+<body>
+    <img class = "pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAriIaiHNiXxhv7x1m99
+    _HC9s55DEELgOHPEobCvdI3OFyx5LGDE0EHUZf3WG5cdvMh6A&usqp=CAU">
+    <center><h1>Student List</h1></center>
+    <div class="vl"></div>
+    <table class="table">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Nationality</th>
+            <th>Id Number</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+            <th>Parent/Guardian Name</th>
+            <th>Parent/Guardian Contact</th>
+        </tr>
+        {% for student in students%}
+        <tr>
+            <td>
+                {{student.first_name}}
+            </td>
+            <td>
+                {{student.last_name}}
+            </td>
+            <td>
+                {{student.age}}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
