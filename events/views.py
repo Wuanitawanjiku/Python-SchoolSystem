@@ -1,3 +1,4 @@
+from .models import Events
 from django.shortcuts import render
 from.forms import EventRegistrationForm
 
@@ -13,3 +14,7 @@ def register_event(request):
     else:
         form=EventRegistrationForm()
     return render(request,"register_event.htm", {"form":form})
+
+def event_list(request):
+    events = Events.objects.all()
+    return render(request, "event_list.htm", {"events":events})

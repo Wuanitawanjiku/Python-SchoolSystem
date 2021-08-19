@@ -13,9 +13,10 @@ body{
 }
 
 table{
-    width: 400px;
-    margin-left: 25%;
-    margin-top: 8%;
+    width: 600px;
+    margin-left: 28%;
+    margin-top: 4%;
+    margin-bottom: 8%;
 }
 
 th, caption{
@@ -36,7 +37,7 @@ tr:nth-child(even){
 }
 
 tr:nth-child(odd){
-    background-color:#ddd;
+    background-color:rgb(255, 255, 255);
 }
 
 .pic{
@@ -48,7 +49,6 @@ tr:nth-child(odd){
 }
     </style>
 </head>
-
 <body>
     <img class = "pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAriIaiHNiXxhv7x1m99
     _HC9s55DEELgOHPEobCvdI3OFyx5LGDE0EHUZf3WG5cdvMh6A&usqp=CAU">
@@ -58,14 +58,9 @@ tr:nth-child(odd){
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Nationality</th>
-            <th>Id Number</th>
+            <th>Age</th>            
             <th>Email Address</th>
             <th>Phone Number</th>
-            <th>Parent/Guardian Name</th>
-            <th>Parent/Guardian Contact</th>
         </tr>
         {% for student in students%}
         <tr>
@@ -77,6 +72,12 @@ tr:nth-child(odd){
             </td>
             <td>
                 {{student.age}}
+            </td>
+            <td>
+                {{student.email_address}}
+            </td>
+            <td>
+                {{student.phone_number}}
             </td>
         </tr>
         {% endfor %}
