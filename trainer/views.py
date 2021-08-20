@@ -1,5 +1,5 @@
 from .models import Trainer
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from.forms import TrainerRegistrationForm
 # Create your views here.
 
@@ -8,6 +8,7 @@ def register_trainer(request):
         form = TrainerRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('register_trainer')
         else:
             print(form.errors)
     else:

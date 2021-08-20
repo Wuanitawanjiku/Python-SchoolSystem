@@ -1,5 +1,5 @@
 from .models import Events
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from.forms import EventRegistrationForm
 
 # Create your views here.
@@ -9,6 +9,7 @@ def register_event(request):
         form=EventRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('register_event')
         else:
             print(form.errors)
     else:
