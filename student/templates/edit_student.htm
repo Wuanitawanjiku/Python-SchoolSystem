@@ -75,18 +75,18 @@ select{
     </style>
 </head>
 <body>
+    
     <img class = "pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAriIaiHNiXxhv7x1m99
     _HC9s55DEELgOHPEobCvdI3OFyx5LGDE0EHUZf3WG5cdvMh6A&usqp=CAU">
 
     <center><h1>Registration Details</h1></center>
     
     <div class="registration">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {%csrf_token%}
             {{form.as_p}}  
             <button type="submit" class="sign-up-btn">Submit</button>  
-        </form>
-        
+        </form>        
     </div>   
 </body>
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <title>
+        {% block title %}School Management{% endblock %}
+    </title>
+</head>
+
+    <style>    
+    .sidenav {
+        height:100%;
+        width:160px;
+        position: fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        background-color:rgb(241, 195, 217);
+        overflow-x:hidden;
+        padding-top:20px;
+    }
+    .sidenav a {
+        padding:70px 8px 6px 16px;
+        text-decoration: none;
+        font-size:25px;
+        color: #111;
+        display:block;
+    }
+
+    .sidenav a:hover{
+        color:#f1f1f1;
+    }	
+    
+    .main{
+        margin-left:160px;
+        padding: 0px 10px;
+    }    
+
+    .pic{
+    height: 70px;
+    border-radius: 36px;
+    position: absolute;
+    top: 2%;
+    left: 78%;
+    }
+
+    .picture3{
+    margin-left: -50px;
+    height:92%;
+    width:75%;
+    position: fixed;
+    z-index:1;
+    top: 110px;
+    overflow-x:hidden;
+    }
+
+    body{
+    background-image: url("https://assets.vogue.com/photos/603cf262e57a108439076bb1/master/w_1600%2Cc_limit/08b-nairobi-kenya-silicon-savannah-women-coders.jpg");
+    margin-left: 300px;
+    height:50%;
+    width:80%;
+    position: fixed;
+    z-index:1;
+    top: 0;
+    overflow-x:hidden;
+    }
+
+    .title{
+        margin-left: 230px;
+    }
+
+    .student{
+        left: 30px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 20%;
+        background-color: rgb(0, 0, 0);
+        color: #f1f1f1;
+    }
+
+    .trainer{
+        left: 230px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 20%;
+        background-color: rgb(0, 0, 0);
+        color: #f1f1f1;
+    }
+
+    .course{
+        left: 430px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 20%;
+        background-color: rgb(0, 0, 0);
+        color: #f1f1f1;
+    }
+
+    .events{
+        left: 630px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 20%;
+        background-color: rgb(0, 0, 0);
+        color: #f1f1f1;
+    }
+
+    
+    </style>
+
+<body>    
+    <div class="sidenav">
+        <a href="{%url 'student_list'%}">Student</a>
+		<a href="{%url 'trainer_list'%}">Trainer</a>
+		<a href="{%url 'course_list'%}">Course</a>
+        <a href="{%url 'cal:calendar'%}">Events</a>
+	</div>
+
+    <h1 class="title">Management Pothole</h1>
+    <button class="student">{{student}}Student</button>
+    <button class="trainer">{{trainers}}Trainers</button>    
+    <button class="course">{{course}}Courses</button>
+    <button class="events">{{events}}Events</button>
+    
+	{% block content %}
+
+    <img class = "pic" src="http://aspirationtech.org/files/WeapSocAkiraChixlogo.jpg">
+    <img class="picture3" src="https://assets.vogue.com/photos/603cf262e57a108439076bb1/master/w_1600%2Cc_limit/08b-nairobi-kenya-silicon-savannah-women-coders.jpg">
+  
+	{% endblock %}  
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

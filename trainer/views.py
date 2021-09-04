@@ -5,10 +5,11 @@ from.forms import TrainerRegistrationForm
 
 def register_trainer(request):
     if request.method == "POST":
-        form = TrainerRegistrationForm(request.POST)
+        form = TrainerRegistrationForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('register_trainer')
+            print(f'Welcome! You are now a member')
+            # return redirect('register_trainer')
         else:
             print(form.errors)
     else:

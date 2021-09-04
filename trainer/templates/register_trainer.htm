@@ -81,7 +81,7 @@ select{
     <center><h1>Registration Details</h1></center>
     
     <div class="registration">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {%csrf_token%}
             {{form.as_p}}  
             <button type="submit" class="sign-up-btn">Submit</button>  
