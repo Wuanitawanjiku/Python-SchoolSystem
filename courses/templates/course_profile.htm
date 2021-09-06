@@ -6,10 +6,10 @@
         rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
         crossorigin="anonymous">
-  <title>Student Profile</title>
+  <title>Course Profile</title>
 <style>
 body{
-    background-image: url("https://assets.vogue.com/photos/603cf262e57a108439076bb1/master/w_1600%2Cc_limit/08b-nairobi-kenya-silicon-savannah-women-coders.jpg");
+    background-image: url("https://uploads-ssl.webflow.com/5e72ed345a0058a3332497f7/5eb9c614ce4ca10ba96f88b2_BUilt%20In%20Africa%20Articel.jpg");
     margin-left: 300px;
     height:50%;
     width:80%;
@@ -24,23 +24,23 @@ body{
 
 <body>
 <div style="display: flex; flex-direction: row; flex-wrap: wrap">
-  <div class="card" style="width: 28rem; margin: 10px; margin-left: 150px; margin-top: 50px;">
-    <img src="https://miro.medium.com/max/791/1*CAeRsSj4rIYstkypdzIDTg.jpeg" class="card-img-top" >
+  <div class="card" style="width: 28rem; margin: 10px; margin-left: 130px; margin-top: 45px;">
+    <img src="https://greentomato.academy/wp-content/uploads/2020/07/the-benefits-of-performing-ux-research.jpg" class="card-img-top" >
     <div class="card-body">
       <div style="display: flex; flex-direction: row">
-        <h2 class="card-title">{{student.first_name}} {{student.last_name}}</h2>
+        <h2 class="card-title">{{course.course_name}}</h2>
         {#  Colored cirlce:#}
         <div style="
           background: rgb(121, 12, 72);
           width: 20px;
           height: 20px;
-          margin-left: 40px;
+          margin-left: 180px;
           border-radius: 50%;
           margin-top: 10px;
         "></div>
       </div>
-      <p class="card-text">{{student.age}}</p>
-      <p class="card-text">{{student.email_address}}</p>
+      <p class="card-text">{{course.course_id}}</p>
+      <p class="card-text">{{course.course_trainer}}</p>
       <a href="/command/1/color" class="btn btn-primary">Change Image</a>
       <a href="/command/1/delete" class="btn btn-primary">Delete</a>
     </div>

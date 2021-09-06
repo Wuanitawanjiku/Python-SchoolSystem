@@ -21,10 +21,21 @@
 
 <title>Calender</title>
 </head>
+
 <body>
   <style>
-/* Common styles */
+
 body {
+  background-image: url("https://pbs.twimg.com/media/EQEtxW4XsAAi_8t.jpg");
+  margin-left: 175px;
+  height:50%;
+  width:100%;
+  position: fixed;
+  z-index:1;
+  top: 0;
+  overflow-x:hidden;   
+  background-repeat: no-repeat;   
+  background-size: 115%;
   font-family: "ptsans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -32,7 +43,7 @@ body {
   border-color: rgb(219, 53, 131);
   color:rgb(219, 53, 131);
 }
-  
+
 .info:hover {
   background:palevioletred;
   color: white;
@@ -41,6 +52,8 @@ body {
 .info {
   border-color: rgb(219, 53, 131);
   color:rgb(219, 53, 131);
+  margin-right:310px;
+  margin-left:-30px;
 }
 
 .info:hover {
@@ -91,6 +104,8 @@ form{
 hr{
   background-color:rgb(219, 53, 131);
   height: 3px;
+  margin-left: -30%;
+  margin-top: 0.3%;
 }
 
 .left {
@@ -113,21 +128,24 @@ hr{
 .title {
   text-align: center;
   margin: 10px;
+  margin-left: -30%;
 }
 
 .calendar {
   width: 58%;
-  margin-left: 25%;
+  margin-left: 8%;
   font-size: 13px;
-}
-
-.calendar:hover{
-  background:rgb(219, 53, 131);
+  background:rgb(27, 21, 24);
   color: white;
 }
 
-.calendar tr, .calendar td {
+.calendar tr, .calendar td{
   border: 1px solid rgb(219, 53, 131);
+}
+
+.calendar td:hover{
+  border: 2px solid rgb(201, 175, 187);
+  cursor: pointer;
 }
 
 .calendar th {
@@ -136,7 +154,7 @@ hr{
   font-size: 18px;
 }
 
-.calendar td {
+.calendar td{
   width: 100px;
   height: 50px;
   padding: 20px 0px 0px 5px;
@@ -158,6 +176,7 @@ ul {
 a {
   color:rgb(219, 53, 131);
 }
+
 textarea{
   width: 100%;
 }
@@ -168,7 +187,7 @@ textarea{
 
   {% block content %}
   {% endblock %}
-<!-- Optional JavaScript -->
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>

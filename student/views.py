@@ -14,7 +14,6 @@ def register_student(request):
         if form.is_valid():
             form.save()
             print(f'You are now fully registered')
-            # return redirect('register_student')
         else:
             print(form.errors)
     else:
@@ -24,7 +23,6 @@ def register_student(request):
 def student_list(request):
     students = Student.objects.all()
     return render(request, "student_list.htm", {"students":students})
-
 
 def edit_student(request, id):
     student = Student.objects.get(id=id)

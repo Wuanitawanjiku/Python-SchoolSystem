@@ -66,21 +66,21 @@ select{
 .sign-up-btn{
     background-color: rgb(219, 53, 131);
 }
+
 .pic{
-    text-align: center;
-    height: 90px;
-    border-radius: 20px;
-    margin-left: 520px;
-    margin-top: 30px;
+    height: 70px;
+    border-radius: 36px;
+    position: absolute;
+    top: 2%;
+    left: 78%;
 }
-    </style>
+
+</style>
 </head>
 <body>
-    <img class = "pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAriIaiHNiXxhv7x1m99
-    _HC9s55DEELgOHPEobCvdI3OFyx5LGDE0EHUZf3WG5cdvMh6A&usqp=CAU">
+    <img class = "pic" src="http://aspirationtech.org/files/WeapSocAkiraChixlogo.jpg">
 
     <center><h1>Registration Details</h1></center>
-    
     <div class="registration">
         <form method="POST" enctype="multipart/form-data">
             {%csrf_token%}

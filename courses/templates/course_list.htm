@@ -7,20 +7,30 @@
     <title>Document</title>
 <style>
 body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(241, 195, 217);    
+    background-image: url("https://blogs.afdb.org/sites/default/files/a1-africa-stem.jpg");
+    margin-left: 300px;
+    height:50%;
+    width:80%;
+    position: fixed;
+    z-index:1;
+    top: 0;
+    overflow-x:hidden;   
+    background-repeat: no-repeat;   
+    background-size: 115%;
 }
 
+
 table{
-    width: 900px;
-    margin-left: 15%;
-    margin-top: 4%;
+    width: 100%;
+    margin-left: -15%;
+    margin-top: 7%;
     margin-bottom: 8%;
 }
 
 th, caption{
     text-align: left;
+    background:rgb(41, 41, 41);
+    color: white;
 }
 
 table, th, td{
@@ -40,19 +50,37 @@ tr:nth-child(odd){
     background-color:rgb(255, 255, 255);
 }
 
-.pic{
-    text-align: center;
-    height: 90px;
-    border-radius: 20px;
-    margin-left: 520px;
-    margin-top: 30px;
+td:hover{
+  border: 1px solid rgb(209, 121, 162);
+  cursor: pointer;
+  background:rgb(255, 0, 119);
+  color: white;
 }
-    </style>
+
+.pic{
+    height: 70px;
+    border-radius: 36px;
+    position: absolute;
+    top: 2%;
+    left: 78%;
+}
+
+h1{
+    margin-left: 230px;
+    color: rgb(255, 255, 255);
+  
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+</style>
 </head>
+
 <body>
-    <img class = "pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAriIaiHNiXxhv7x1m99
-    _HC9s55DEELgOHPEobCvdI3OFyx5LGDE0EHUZf3WG5cdvMh6A&usqp=CAU">
-    <center><h1>Course List</h1></center>
+    <img class = "pic" src="http://aspirationtech.org/files/WeapSocAkiraChixlogo.jpg">
+    <h1>Course List</h1>
     <div class="vl"></div>
     <table class="table">
         <tr>
@@ -61,6 +89,9 @@ tr:nth-child(odd){
             <th>Course Trainer</th>            
             <th>Course Email</th>
             <th>Course Channel</th>
+            <th>Edit</th>
+            <th>Profile</th>
+            <th>Delete</th>
         </tr>
         {% for course in courses%}
         <tr>
@@ -78,6 +109,17 @@ tr:nth-child(odd){
             </td>
             <td>
                 {{course.course_channel}}
+            </td>
+            <td>
+                <a href="{%url 'edit_course' id=course.id%}">Edit</a>
+            </td>
+
+            <td>
+                <a href="{%url 'course_profile' id=course.id%}">Profile</a>
+            </td>
+
+            <td>
+                <a href="{%url 'delete_course' id=course.id%}">Delete</a>
             </td>
         </tr>
         {% endfor %}
