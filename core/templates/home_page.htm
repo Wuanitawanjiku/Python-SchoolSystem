@@ -75,44 +75,61 @@
 
     .student{
         left: 30px;
-        width: 10%;
-        height: 10%;
+        width: 150px;
+        height: 60px;
         position: absolute;
-        top: 20%;
-        background-color: rgb(0, 0, 0);
+        top: 90%;
+        background-color: rgb(83, 3, 83);
         color: #f1f1f1;
+        z-index: 999;
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: rgb(241, 195, 217);
     }
 
     .trainer{
         left: 230px;
-        width: 10%;
-        height: 10%;
+        width: 150px;
+        height: 60px;
         position: absolute;
-        top: 20%;
-        background-color: rgb(0, 0, 0);
+        top: 90%;
+        background-color: rgb(83, 3, 83);
         color: #f1f1f1;
+        z-index: 999;
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: rgb(241, 195, 217);
     }
 
     .course{
         left: 430px;
-        width: 10%;
-        height: 10%;
+        width: 150px;
+        height: 60px;
         position: absolute;
-        top: 20%;
-        background-color: rgb(0, 0, 0);
+        top: 90%;
+        background-color: rgb(83, 3, 83);
         color: #f1f1f1;
+        z-index: 999;
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: rgb(241, 195, 217);
     }
 
     .events{
         left: 630px;
-        width: 10%;
-        height: 10%;
+        width: 150px;
+        height: 60px;
         position: absolute;
-        top: 20%;
-        background-color: rgb(0, 0, 0);
+        top: 90%;
+        background-color: rgb(83, 3, 83);
         color: #f1f1f1;
+        z-index: 999;
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: rgb(241, 195, 217);
     }
-
+button:hover{
+    background-color: #f1f1f1;
+    cursor: pointer;
+    color: black;
+    border: 1px solid purple;
+}
     
     </style>
 
@@ -124,17 +141,17 @@
         <a href="{%url 'cal:calendar'%}">Events</a>
 	</div>
 
-    <h1 class="title">Management Pothole</h1>
-    <button class="student">{{student}}Student</button>
-    <button class="trainer">{{trainers}}Trainers</button>    
-    <button class="course">{{course}}Courses</button>
-    <button class="events">{{events}}Events</button>
+
     
 	{% block content %}
 
     <img class = "pic" src="http://aspirationtech.org/files/WeapSocAkiraChixlogo.jpg">
     <img class="picture3" src="https://assets.vogue.com/photos/603cf262e57a108439076bb1/master/w_1600%2Cc_limit/08b-nairobi-kenya-silicon-savannah-women-coders.jpg">
-  
+    <h1 class="title">Management Portal</h1>
+    <button class="student">{{student}}Student</button>
+    <button class="trainer">{{trainer}}Trainers</button>    
+    <button class="course">{{course}}Courses</button>
+    <button class="events">{{events}}Events</button>
 	{% endblock %}  
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

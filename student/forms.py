@@ -1,6 +1,4 @@
 from django import forms
-# from django.db.models.fields.files import FileField
-# from django.forms import fields
 from django.db.models.base import Model
 from django.db.models.enums import Choices
 from django.db.models.fields import IntegerField
@@ -15,56 +13,56 @@ class StudentRegistrationForm(forms.ModelForm):
         widgets = {
             'first_name': TextInput(attrs={
                 'class': "form-control",
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'FirstName'
                 }),
 
             'last_name':TextInput(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'SecondName'
                 }),
 
             'age':NumberInput(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'Age'
                 }),
 
             'email_address': EmailInput(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'Email'
                 }),
 
             'phone_number':TextInput(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'PhoneNumber'
                 }),
 
-            'nationality':TextInput(attrs={
+            'nationality':Select(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'Nationality'
                 }),
             
              'medical_form':ClearableFileInput(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'Allergies',
                 'multiple':True,
                 }),
 
             'academic_year':NumberInput(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'Year joined'
                 }),
 
              'admission_date':DateInput(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'academic_year'
                 },
                 format='%Y-%m-%d'
@@ -72,21 +70,20 @@ class StudentRegistrationForm(forms.ModelForm):
             
             'profile_pic':FileInput(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'Image',
                 'multiple':True,
                 }),
 
             'gender':Select(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'Gender',
-                'multiple':True,
                 }),
 
             'date_of_birth':DateInput(attrs={
                 'class': "form-control", 
-                'style': 'max-width: 300px;',
+                'style': 'max-width: 500px;',
                 'placeholder': 'date_of_birth',
                 },
                 format='%Y-%m-%d'

@@ -7,7 +7,7 @@
     <title>Document</title>
 <style>
 body{
-    background-image: url("https://blogs.afdb.org/sites/default/files/a1-africa-stem.jpg");
+    background-image: url("https://uploads-ssl.webflow.com/5e72ed345a0058a3332497f7/5eb9c614ce4ca10ba96f88b2_BUilt%20In%20Africa%20Articel.jpg");  
     margin-left: 300px;
     height:50%;
     width:80%;
@@ -66,14 +66,18 @@ td:hover{
 }
 
 h1{
-    margin-left: 230px;
+    margin-left: 250px;
     color: rgb(255, 255, 255);
-  
 }
 
 a{
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+
+img{
+    height: 50px;
+    margin-left: 15px;
 }
 </style>
 </head>
@@ -84,6 +88,7 @@ a{
     <div class="vl"></div>
     <table class="table">
         <tr>
+            <th>Course Profile</th>
             <th>Course Name</th>
             <th>Course Id</th>
             <th>Course Trainer</th>            
@@ -95,6 +100,9 @@ a{
         </tr>
         {% for course in courses%}
         <tr>
+            <td>
+                <img src="{{course.course_profile_pic.url}}">
+            </td>
             <td>
                 {{course.course_name}}
             </td>

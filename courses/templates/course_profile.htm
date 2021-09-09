@@ -25,10 +25,10 @@ body{
 <body>
 <div style="display: flex; flex-direction: row; flex-wrap: wrap">
   <div class="card" style="width: 28rem; margin: 10px; margin-left: 130px; margin-top: 45px;">
-    <img src="https://greentomato.academy/wp-content/uploads/2020/07/the-benefits-of-performing-ux-research.jpg" class="card-img-top" >
+    <img src="{{course.course_profile_pic.url}}" class="card-img-top" >
     <div class="card-body">
       <div style="display: flex; flex-direction: row">
-        <h2 class="card-title">{{course.course_name}}</h2>
+        <h5 class="card-title">Course Name: {{course.course_name}}</h5>
         {#  Colored cirlce:#}
         <div style="
           background: rgb(121, 12, 72);
@@ -39,10 +39,10 @@ body{
           margin-top: 10px;
         "></div>
       </div>
-      <p class="card-text">{{course.course_id}}</p>
-      <p class="card-text">{{course.course_trainer}}</p>
-      <a href="/command/1/color" class="btn btn-primary">Change Image</a>
-      <a href="/command/1/delete" class="btn btn-primary">Delete</a>
+      <p class="card-text">Course Code: {{course.course_id}}</p>
+      <p class="card-text">Course Trainer: {{course.course_trainer}}</p>
+      <a href="/command/1/color" class="btn btn-primary" style="background-color: rgb(85, 0, 47); border: 1px rgb(85, 0, 47)">Edit Course</a>
+      <a href="/command/1/delete" class="btn btn-primary" style="background-color: rgb(85, 0, 47); border: 1px rgb(85, 0, 47)">Delete</a>
     </div>
   </div>
 </div>

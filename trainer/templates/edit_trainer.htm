@@ -20,8 +20,7 @@ input{
     width: 95%;
     outline: none;
     border: 1px solid #999;
-    color: rgb(219, 53, 131);
-    
+    color: rgb(219, 53, 131);      
 }
 
 .registration{
@@ -52,7 +51,7 @@ button{
 }
 
 select{
-    -webkit-appearance: none;
+     -webkit-appearance: none;
     border-radius: 20px;
     margin: 12px;
     padding: 10px;
@@ -65,13 +64,16 @@ select{
 .sign-up-btn{
     background-color: rgb(219, 53, 131);
 }
-
 .pic{
-    text-align: center;
-    height: 90px;
-    border-radius: 20px;
-    margin-left: 520px;
-    margin-top: 30px;
+    height: 70px;
+    border-radius: 36px;
+    position: absolute;
+    top: 5%;
+    left: 80%;
+}
+
+h1{
+    margin-top: 3.9%;
 }
     </style>
 </head>
@@ -79,7 +81,7 @@ select{
 <body>    
     <img class = "pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAriIaiHNiXxhv7x1m99
     _HC9s55DEELgOHPEobCvdI3OFyx5LGDE0EHUZf3WG5cdvMh6A&usqp=CAU">
-    <center><h1>Registration Details</h1></center>    
+    <center><h1>Edit Trainer Details</h1></center>    
     <div class="registration">
         <form method="POST" enctype="multipart/form-data">
             {%csrf_token%}

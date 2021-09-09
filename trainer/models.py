@@ -33,3 +33,6 @@ class Trainer(models.Model):
     salary=models.PositiveBigIntegerField(null=True, blank=True)
     job_title=models.CharField(max_length=25)
     company=models.CharField(max_length=30)
+
+def __str__(self):
+    return self.first_name

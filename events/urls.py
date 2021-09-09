@@ -1,6 +1,3 @@
-# from .models import Events
-# from django.urls import path
-# from.views import event_list, register_event
 from django.conf.urls import url
 from .import views
 app_name = 'cal'
