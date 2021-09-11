@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'courses',
     'trainer',
     'core',
+    'api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
