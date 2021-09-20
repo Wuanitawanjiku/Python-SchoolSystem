@@ -80,7 +80,6 @@
         position: absolute;
         top: 90%;
         background-color: rgb(83, 3, 83);
-        color: #f1f1f1;
         z-index: 999;
         border: 1px solid rgb(255, 255, 255);
         box-shadow: rgb(241, 195, 217);
@@ -124,12 +123,33 @@
         border: 1px solid rgb(255, 255, 255);
         box-shadow: rgb(241, 195, 217);
     }
-button:hover{
+
+    .student a{
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .trainer a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .course a{
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .events a{
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    button:hover{
     background-color: #f1f1f1;
     cursor: pointer;
     color: black;
     border: 1px solid purple;
-}
+    }
     
     </style>
 
@@ -140,25 +160,18 @@ button:hover{
 		<a href="{%url 'course_list'%}">Course</a>
         <a href="{%url 'cal:calendar'%}">Events</a>
 	</div>
-
-    <div class="buttons">
-        <a href="{%url 'register_student'%}">Student</a>
-		<a href="{%url 'register_trainer'%}">Trainer</a>
-		<a href="{%url 'register_course%}">Course</a>
-        <a href="{%url 'cal:calendar'%}">Events</a>
-	</div>
     
 	{% block content %}
 
     <img class = "pic" src="http://aspirationtech.org/files/WeapSocAkiraChixlogo.jpg">
     <img class="picture3" src="https://assets.vogue.com/photos/603cf262e57a108439076bb1/master/w_1600%2Cc_limit/08b-nairobi-kenya-silicon-savannah-women-coders.jpg">
     <h1 class="title">Management Portal</h1>
-    
+
     <div class="buttons">
-    <button class="student">{{student}}Student</button>
-    <button class="trainer">{{trainer}}Trainers</button>    
-    <button class="course">{{course}}Courses</button>
-    <button class="events">{{events}}Events</button>
+    <button class="student"><a href="{%url 'register_student'%}">{{student}}Student</a></button>
+    <button class="trainer"><a href="{%url 'register_trainer'%}">{{trainer}}Trainer</a></button>    
+    <button class="course"><a href="{%url 'register_courses'%}">{{course}}Courses</a></button>
+    <button class="events"><a href="{%url 'cal:calendar'%}">{{events}}Events</a></button>
     </div>
 	{% endblock %}  
     

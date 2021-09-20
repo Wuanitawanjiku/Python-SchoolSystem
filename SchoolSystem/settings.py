@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-ekx%1*5q_74esuua8pzfcm)1o^3_+xdp5vxuubl0e5j(fw5s2i
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'wuanita-schoolsystem.herokuapp.com']
 
