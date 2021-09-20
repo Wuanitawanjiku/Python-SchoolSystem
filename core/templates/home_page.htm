@@ -141,17 +141,24 @@ button:hover{
         <a href="{%url 'cal:calendar'%}">Events</a>
 	</div>
 
-
+    <div class="buttons">
+        <a href="{%url 'register_student'%}">Student</a>
+		<a href="{%url 'register_trainer'%}">Trainer</a>
+		<a href="{%url 'register_course%}">Course</a>
+        <a href="{%url 'cal:calendar'%}">Events</a>
+	</div>
     
 	{% block content %}
 
     <img class = "pic" src="http://aspirationtech.org/files/WeapSocAkiraChixlogo.jpg">
     <img class="picture3" src="https://assets.vogue.com/photos/603cf262e57a108439076bb1/master/w_1600%2Cc_limit/08b-nairobi-kenya-silicon-savannah-women-coders.jpg">
     <h1 class="title">Management Portal</h1>
+    <div class="buttons">
     <button class="student">{{student}}Student</button>
     <button class="trainer">{{trainer}}Trainers</button>    
     <button class="course">{{course}}Courses</button>
     <button class="events">{{events}}Events</button>
+    </div>
 	{% endblock %}  
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
