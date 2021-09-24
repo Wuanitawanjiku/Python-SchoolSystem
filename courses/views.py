@@ -6,7 +6,7 @@ from.forms import CourseRegistrationForm
 
 def register_courses(request):
     if request.method=="POST":
-        form = CourseRegistrationForm(request.POST)
+        form = CourseRegistrationForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('register_courses')
